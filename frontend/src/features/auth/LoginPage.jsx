@@ -46,8 +46,8 @@ function LoginPage() {
     } catch (error) {
       setErrorMessage(
         error?.response?.data?.message ||
-          error?.message ||
-          "Unable to sign in. Please try again."
+        error?.message ||
+        "Unable to sign in. Please try again."
       );
     } finally {
       setIsLoading(false);
@@ -95,7 +95,7 @@ function LoginPage() {
                 </span>
               </Link>
 
-              
+
 
             </header>
 
@@ -176,16 +176,16 @@ function LoginPage() {
 
                 {/* Decorative visual */}
                 <div className="mt-10 space-y-6">
-</div>
+                </div>
 
-{/* Decorative visual */}
-<div className="relative mt-12 h-[155px] w-full overflow-visible">
-  <img
-    src="/src/assets/devmind-code-visual.png"
-    alt="DevMind code intelligence visualization"
-    className="absolute left-1/2 top-1/2 w-[390px] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain"
-  />
-</div>
+                {/* Decorative visual */}
+                <div className="relative mt-12 h-[155px] w-full overflow-visible">
+                  <img
+                    src="/src/assets/devmind-code-visual.png"
+                    alt="DevMind code intelligence visualization"
+                    className="absolute left-1/2 top-1/2 w-[390px] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain"
+                  />
+                </div>
 
               </div>
 

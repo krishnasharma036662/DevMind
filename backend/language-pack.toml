@@ -5,3 +5,36 @@
 
 # languages = ["python", "javascript", "typescript", "java"]
 # groups = ["all"]
+
+
+Yes — **that’s essentially the idea**, with one important clarification:
+
+* The **4 languages** in the commented example (`Python, JavaScript, TypeScript, Java`) are **not actually configured as the only supported languages**.
+* Tree-sitter Language Pack contains a much larger catalog of grammars (currently hundreds).
+* When DevMind encounters a repository file in another supported language, the package can **download/load that language parser on demand** and cache it.
+* So you don't need to manually install every language parser upfront.
+
+For example:
+
+```text
+Repository
+ ├── JavaScript → load JS parser
+ ├── Python     → load Python parser
+ ├── Rust       → load Rust parser
+ ├── Go         → load Go parser
+ └── Kotlin     → load Kotlin parser
+```
+
+So our goal is:
+
+> **DevMind supports all languages available in the Tree-sitter Language Pack, with parsers loaded/downloaded when required.**
+
+And if we use:
+
+```toml
+groups = ["all"]
+```
+
+we're telling the package to work with the **complete currently published language catalog**, rather than restricting DevMind to four languages.
+
+So **we are not locking DevMind to 4 languages.** The four-language line was only an example.
