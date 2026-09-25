@@ -1,4 +1,4 @@
-import apiClient from "../api/client";
+import { apiClient } from "../api/client";
 
 const AUTH_ENDPOINTS = {
   LOGIN: "/auth/login",
@@ -8,7 +8,10 @@ const AUTH_ENDPOINTS = {
 };
 
 export const login = async (credentials) => {
-  const response = await apiClient.post(AUTH_ENDPOINTS.LOGIN, credentials);
+  const response = await apiClient.post(
+    AUTH_ENDPOINTS.LOGIN,
+    credentials
+  );
 
   return response.data;
 };
@@ -23,13 +26,17 @@ export const register = async (userData) => {
 };
 
 export const logout = async () => {
-  const response = await apiClient.post(AUTH_ENDPOINTS.LOGOUT);
+  const response = await apiClient.post(
+    AUTH_ENDPOINTS.LOGOUT
+  );
 
   return response.data;
 };
 
 export const getCurrentUser = async () => {
-  const response = await apiClient.get(AUTH_ENDPOINTS.ME);
+  const response = await apiClient.get(
+    AUTH_ENDPOINTS.ME
+  );
 
   return response.data;
 };
