@@ -1,0 +1,2 @@
+import PageShell from './PageShell';
+export default function Page(){return <PageShell title="Repository Health" description="Analyze code quality and maintainability."><div className="rounded-xl border border-slate-200 bg-white p-8 text-sm text-slate-500">This screen is connected to the final frontend architecture. Its live data and actions will come from the corresponding REST API.</div></PageShell>}
