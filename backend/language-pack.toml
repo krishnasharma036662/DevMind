@@ -1,0 +1,7 @@
+# DevMind uses the complete Tree-sitter Language Pack catalog.
+# Parsers are downloaded on demand when a repository contains a language.
+# For a fully offline installation, pre-download the complete catalog with:
+# ts-pack download --all
+
+# languages = ["python", "javascript", "typescript", "java"]
+# groups = ["all"]
